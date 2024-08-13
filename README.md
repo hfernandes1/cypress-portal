@@ -11,7 +11,6 @@ Vou tentar passar um passo a passo e no fim, deixar os comandos para rodar os te
 ## Fotos do projeto 📸
 
 Testes           |   Comandos Personalizados           | 
-:-------------------------: | :-------------------------:
 ![image](https://github.com/user-attachments/assets/f17bd723-ab53-45f7-8a0f-395a9ef9e33b)
  | ![image](https://github.com/user-attachments/assets/c8657137-e45c-4198-970d-1f54a8d3367c)
 
