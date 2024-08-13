@@ -11,9 +11,8 @@ Vou tentar passar um passo a passo e no fim, deixar os comandos para rodar os te
 ## Fotos do projeto 📸
 
 Testes           |   Comandos Personalizados           | 
-![image](https://github.com/user-attachments/assets/f17bd723-ab53-45f7-8a0f-395a9ef9e33b)
- | ![image](https://github.com/user-attachments/assets/c8657137-e45c-4198-970d-1f54a8d3367c)
-
+:-------------------------: | :-------------------------:
+![image](https://github.com/user-attachments/assets/f17bd723-ab53-45f7-8a0f-395a9ef9e33b) | ![image](https://github.com/user-attachments/assets/c8657137-e45c-4198-970d-1f54a8d3367c)
 
 
 ## Passo a passo :foot:
@@ -56,7 +55,7 @@ package.json               |
 ![image](https://github.com/user-attachments/assets/ef2d4953-0e01-4108-9c07-07df94fc4b79)
 
 
-## 6 - criando as primeiras pastas :open_file_folder:
+## 5 - criando as primeiras pastas :open_file_folder:
 
 ```
 npm run cypress:open
@@ -69,7 +68,7 @@ Ao executar esse comando, será adicionado alguns packages necessários para exe
 * Chrome
 * Start e2e testing.
 
-## 7 - configure o cypress.config.js ⚙️
+## 6 - configure o cypress.config.js ⚙️
 
 adicionei a baseUrl ( nesse caso irei colocar a página "https://blogdoagi.com.br/", que é o foco desse projeto pessoal ) e também adicionei o "hideXhr" para não aparecer todas as requisições ao executar os testes. 
 
@@ -93,7 +92,7 @@ module.exports = defineConfig({
 ```
 
 
-## 8 - Criar os diretórios para realizar os testes. 📁
+## 7 - Criar os diretórios para realizar os testes. 📁
 
 Vamos começar a criar as pastas para realizar os testes, eu criei um arquivo simples dentro da pasta e2e: 
 
@@ -112,7 +111,7 @@ Adicione a linha abaixo no arquivo e2e.js
 require('cypress-xpath');
 ```
 
-## 10 - Criando comandos personalizados. 
+## 8 - Criando comandos personalizados. 
 
 Relembrando: Aqui é opcional; 
 Existe a opção muito comum na comunidade de criar um page objects, que nada mais é que uma classe orientada a objetos que serve como interface para uma página do seu AUT. 🙂
@@ -120,6 +119,24 @@ Porém, aqui vamos substituir o PO utilizando os comandos personalizados do Cypr
 
 
 ![image](https://github.com/user-attachments/assets/7c4443e3-6f63-4660-87c8-d9192bb1b436)
+
+
+## Rodando o Projeto
+
+É possível executar o projeto iniando o Cypress e pela interface do mesmo, selecionar os testes.
+```
+npm run cypress:open
+```
+
+Ou é possível rodar em background ( dessa maneira, o cypress armazena videos e screenshots em casos de falha ) 
+
+```
+npx cypress run 
+```
+Relatório no modo headless         | 
+:-------------------------: | 
+![image](https://github.com/user-attachments/assets/5c0bf51c-b188-46b4-857b-8eb141f454bb)
+
 
 
 ## Project status
