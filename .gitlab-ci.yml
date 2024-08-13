@@ -1,0 +1,21 @@
+stages:
+  - test
+
+test-job-1:
+  image: cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
+  stage: test
+  script:
+    # install dependencies
+    - npm ci
+    # run Cypress tests
+    - npx cypress run 
+   
+  artifacts:
+    when: always
+    paths:
+      - /cypress/videos/**/*.mp4
+      - /cypress/screenshots/**/*.png
+      - /cypress/reports/
+    expire_in: 15 days
+
+

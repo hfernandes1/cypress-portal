@@ -1,0 +1,25 @@
+{
+  "name": "cypress-portal",
+  "version": "1.0.0",
+  "description": "Teste simples em Cypress, sem o uso de cucumber. Apenas para testar uma funcionalidade de pesquisa de um portal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hfernandes1/cypress-portal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hfernandes1/cypress-portal/issues"
+  },
+  "homepage": "https://github.com/hfernandes1/cypress-portal#readme",
+  "dependencies": {
+    "cypress": "^13.13.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
