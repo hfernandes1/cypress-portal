@@ -14,9 +14,7 @@ Comandos Personalizados           |   Testes API           |
 :-------------------------: | :-------------------------:
 ![image](https://github.com/user-attachments/assets/5957a371-3e02-4516-aa37-0b8259574938) | ![image](https://github.com/user-attachments/assets/d8a865e6-e411-4997-b336-164bb9826a96)
 
-Testes WEB      |   Docker         | 
-:-------------------------: | :-------------------------:
-![image](https://github.com/user-attachments/assets/9e950a47-435b-4410-9498-bf8ae5905e13) | ![image](https://github.com/user-attachments/assets/e9355822-c79a-41ff-9825-5968c09fe4c6)
+
 
 
 
