@@ -10,9 +10,14 @@ Vou tentar passar um passo a passo e no fim, deixar os comandos para rodar os te
 
 ## Fotos do projeto 📸
 
-Testes           |   Comandos Personalizados           | 
+Comandos Personalizados           |   Testes API           | 
 :-------------------------: | :-------------------------:
-![image](https://github.com/user-attachments/assets/f17bd723-ab53-45f7-8a0f-395a9ef9e33b) | ![image](https://github.com/user-attachments/assets/c8657137-e45c-4198-970d-1f54a8d3367c)
+![image](https://github.com/user-attachments/assets/5957a371-3e02-4516-aa37-0b8259574938) | ![image](https://github.com/user-attachments/assets/d8a865e6-e411-4997-b336-164bb9826a96)
+
+Testes WEB      |   Docker         | 
+:-------------------------: | :-------------------------:
+![image](https://github.com/user-attachments/assets/9e950a47-435b-4410-9498-bf8ae5905e13) | ![image](https://github.com/user-attachments/assets/e9355822-c79a-41ff-9825-5968c09fe4c6)
+
 
 
 ## Passo a passo :foot:
@@ -120,6 +125,60 @@ Porém, aqui vamos substituir o PO utilizando os comandos personalizados do Cypr
 
 ![image](https://github.com/user-attachments/assets/7c4443e3-6f63-4660-87c8-d9192bb1b436)
 
+
+## 9 - Docker
+ Instale o Docker:
+ 
+* Windows:
+```
+Baixe e instale o Docker Desktop for Windows.
+Durante a instalação, verifique se a opção para adicionar Docker ao PATH está selecionada.
+Reinicie o computador após a instalação.
+```
+Na pasta Cypress ( raiz ) crie um arquivo chamado de *dockerfile*
+
+Depois de criar o Dockerfile, você pode escrever o arquivo:  
+
+```
+# Use a imagem base do Node.js com uma versão compatível com seu projeto
+FROM cypress/browsers:node-18.16.0-chrome-112.0.5615.121-1-ff-112.0.1-edge-112.0.1722.48-1
+
+# Defina o diretório de trabalho dentro do container
+WORKDIR /app
+
+# Copie o arquivo de dependências
+COPY package.json package-lock.json ./
+
+# Instale as dependências do projeto
+RUN npm install
+
+# Copie todo o conteúdo do projeto para o diretório de trabalho do container
+COPY . .
+
+# Instale o Cypress
+RUN npm install cypress 
+
+# Comando padrão para rodar os testes no container
+CMD ["npx", "cypress", "run", "cy:run"]
+
+
+```
+
+Rodar o container com os seguintes comandos:
+
+Build da Imagem:
+
+```
+docker build -t cypress-e2e-project .
+```
+
+Rodar o Container:
+
+```
+docker run -it cypress-e2e-project
+```
+
+Esse setup deve ser suficiente para rodar seus testes E2E usando Cypress dentro de um container Docker.
 
 ## Rodando o Projeto
 
